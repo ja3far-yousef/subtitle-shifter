@@ -1,0 +1,14 @@
+<h1>Subtitle Processed Successfully</h1>
+
+<p>
+  Shift applied:
+  <%= @job.shift_milliseconds %> ms
+</p>
+
+<a href="<%= rails_blob_path(@job.output_file, disposition: "attachment") %>">
+  Download Processed Subtitle
+</a>
+
+<br><br>
+
+<a href="/">Process Another File</a>

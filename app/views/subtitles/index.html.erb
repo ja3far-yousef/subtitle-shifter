@@ -1,0 +1,21 @@
+<h1>Subtitle Shifter</h1>
+
+<p>Upload your subtitle file and shift timing easily.</p>
+
+<form action="/upload" method="post" enctype="multipart/form-data" data-turbo="false">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  <div>
+    <input type="file" name="file" required />
+  </div>
+
+  <br>
+
+  <div>
+    <input type="number" name="shift" placeholder="Shift in milliseconds" required />
+  </div>
+
+  <br>
+
+  <button type="submit">Process Subtitle</button>
+</form>
